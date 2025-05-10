@@ -1,0 +1,100 @@
+Aluno: Micael Balza
+
+--- Comandos usados: 
+
+mkdir tarefa-git-unidade2
+cd tarefa-git-unidade2
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead .
+echo "Primeira versão do texto - Embarcatech" > texto.txt
+git add texto.txt
+git commit -m "Adiciona texto.txt com conteúdo inicial"
+git checkout -b feature-1
+echo "Texto alterado na feature-1" > texto.txt
+git commit -am "Altera texto.txt na branch feature-1"
+git checkout main
+echo "Texto alterado na main" > texto.txt
+git commit -am "Altera texto.txt na branch main"
+git merge feature-1
+git add texto.txt
+git commit -m "Resolve conflito entre main e feature-1"
+git checkout -b add-comandos
+
+--- Comandos a serem executados posteriormente a criação deste documento:
+git add comandos.txt
+git commit -m "Adiciona a lista comandos utilizados na atividade e a identidição do aluno"
+git remote add origin-atividade https://github.com/micaelbalza/curso-git-ead-ifrn.git
+git push origin-atividade main
+git push origin-atividade add-comandos
+
+
+
+
+
+
+
+
+
+
+
+--- Conflito criado: 
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git merge feature-1
+warning: Cannot merge binary files: texto.txt (HEAD vs. feature-1)
+Auto-merging texto.txt
+CONFLICT (content): Merge conflict in texto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2>
+
+
+
+
+--- Histórico de comandos executados no terminal até a criação deste documento: 
+
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> echo "Primeira versão do texto - Embarcatech" > texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git add texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git commit -m "Adiciona texto.txt com conteúdo inicial"
+[main c7d2d68] Adiciona texto.txt com conteúdo inicial
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git checkout -b feature-1
+Switched to a new branch 'feature-1'
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> echo "Texto alterado na feature-1" > texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git commit -am "Altera texto.txt na branch feature-1"
+[feature-1 8a60369] Altera texto.txt na branch feature-1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> echo "Texto alterado na main" > texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git commit -am "Altera texto.txt na branch main"
+[main d010b7b] Altera texto.txt na branch main
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git merge feature-1
+warning: Cannot merge binary files: texto.txt (HEAD vs. feature-1)
+Auto-merging texto.txt
+CONFLICT (content): Merge conflict in texto.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> ls
+
+
+    Diretório: C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        10/05/2025     20:21             23 arquivo1
+-a----        10/05/2025     20:21             38 arquivo2
+-a----        10/05/2025     20:21           6465 README.md
+-a----        10/05/2025     20:30             50 texto.txt
+
+
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> echo .\texto.txt
+.\texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> echo texto.txt
+texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git add texto.txt
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git commit -m "Resolve conflito entre main e feature-1"
+[main 2228552] Resolve conflito entre main e feature-1
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2> git checkout -b add-comandos
+Switched to a new branch 'add-comandos'
+PS C:\Users\micae\OneDrive\Desktop\tarefa-git-unidade2>
